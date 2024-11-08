@@ -1,0 +1,107 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Layout */
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background: rgba(255, 255, 255, 0.1); /* Glass effect */
+  backdrop-filter: blur(10px);          /* Glass effect */
+  width: 220px; /* Increased width for modern look */
+  height: 100vh; /* Full height of the viewport */
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  padding-top: 20px;
+}
+
+.sidebar .nav-card {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent card background */
+  border-radius: 12px;                  /* Rounded corners */
+  padding: 15px;
+  margin: 10px 0;                       /* Spacing between cards */
+  display: flex;                         /* Flexbox for icon alignment */
+  align-items: center;                   /* Center the icon and text vertically */
+  transition: background 0.3s, transform 0.2s; /* Transition effect for hover */
+}
+
+.sidebar .nav-card:hover {
+  background: rgba(255, 255, 255, 0.3); /* Change background on hover */
+  transform: translateY(-2px);          /* Lift effect on hover */
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 220px; /* Adjusted for sidebar width */
+}
+
+/* Header Styling */
+header {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100%; /* Full width */
+}
+
+/* Content Area Styling */
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light gray background for content */
+  overflow-y: auto;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width */
+  z-index: 1000;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px; /* Reduce sidebar width for smaller screens */
+  }
+
+  .main-content {
+    margin-left: 180px; /* Adjust content margin */
+  }
+
+  header {
+    padding: 0 10px;
+  }
+
+  main {
+    padding: 10px;
+  }
+}

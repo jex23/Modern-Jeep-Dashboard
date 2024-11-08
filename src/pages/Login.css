@@ -1,0 +1,31 @@
+/* Center the form vertically and horizontally */
+.login-container {
+  height: 100vh;
+  background: linear-gradient(135deg, #f39c12, #e74c3c); /* Gradient background */
+}
+
+.login-form {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Input fields styling */
+.form-control {
+  border-radius: 5px;
+  height: 45px;
+  font-size: 16px;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c0392b;
+  border-color: #c0392b;
+}
